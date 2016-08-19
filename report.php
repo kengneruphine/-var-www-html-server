@@ -1,5 +1,6 @@
 </br>
  </br>
+ <form>
       <h4 class="center-align">Report Form</h4><hr style="width:14%;color:indigo;background-color:indigo ;border:none;height :4px">
       </br>
       <div class="row">
@@ -130,16 +131,16 @@
                         </tbody> 
                      </table>
                    </div>
-                 </div></br>
+                 </div></br></br>
 
          <div class="row">
-            <div class="col s3">.</div> 
-              <div class="col s8">
-                <a class="waves-effect indigo darken-1 btn"><i class="material-icons right">send</i>send</a>
+            <div class="col s6">.</div> 
+              <div class="col s4">
+                <button class="waves-effect indigo darken-1 btn" type="submit"><i class="material-icons right">send</i>send</button>
               </div>
           </div>            
 
-
+</form>
 
  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> 
  <script type="text/javascript" src="js/materialize.min.js"></script>

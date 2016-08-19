@@ -10,12 +10,13 @@ require('head.php');
 	<div class="row">
 	  <div class="col s3">.</div>
 	  
-	<form class="col s6 z-depth-2" action="" method="">
+	<form class="col s6 z-depth-2" action="login.php" method="post">
       <div class="row">
       <div class="col s2">.</div>
         <div class="input-field col s6">
-          <input value="" id="name" type="text" class="validate">
-          <label  class="active" for="name">username</label>
+         <i class="material-icons prefix">account_circle</i>
+          <input value="" id="icons_prefix" type="text" class="validate">
+          <label  class="active" for="icons_prefix">username</label>
         </div>
 		</div>
 		
@@ -23,8 +24,9 @@ require('head.php');
 	   <div class="row">
      <div class="col s2">.</div>
 		<div class="input-field col s6">
-          <input  value="" id="password" type="password" class="validate">
-          <label  class="active" for="password">Password</label>
+    <i class="material-icons prefix">lock</i>
+          <input  value="" id="icons_prefix" type="password" class="validate">
+          <label  class="active" for="icons_prefix">Password</label>
         </div>
       </div>
 	  

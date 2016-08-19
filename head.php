@@ -19,7 +19,7 @@ background-image:url(css/images/bg.png);
         <nav> 
              
             <div class="nav-wrapper indigo darken-1"> 
-            <a href="#" class="brand-logo left"><img src="css/images/l.png" width="100px" height="62px"></a>
+            <a href="http://localhost/library-management-system/" class="brand-logo left"><img src="css/images/l.png" width="180px" height="120px"></a>
                <ul id="nav-mobile" class="right indigo darken-1">
                   <li><h5>library management system</h5></li>
                  </ul>
