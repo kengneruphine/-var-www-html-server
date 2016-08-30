@@ -3,7 +3,7 @@
               <div class="row">
       <div class="col s4">.</div>
       
-    <form ng-app="myApp" class="col s6 z-depth-2" action="" method="POST" ng-controller="validateCtrl" 
+    <form ng-app="myApp" class="col s6 z-depth-2" action="creat.php" method="POST" ng-controller="validateCtrl" 
  name="myForm" novalidate> 
   
              <div class="row">
@@ -61,7 +61,7 @@
 		 <div class="col s2">.</div>
 	  
 	    <div class="input-field col s3">
-		<a href="#" class=" btn indigo darken-1" type="submit" ng-disabled="myForm.user.$touched && myForm.user.$invalid || myForm.password.$touched && myForm.password.$invalid || myForm.email.$touched && myForm.email.$invalid || myForm.phoneNo.$touched && myForm.phoneNo.$invalid" name="action">Create</a>
+		<button class=" btn indigo darken-1" type="submit"  ng-disabled="myForm.user.$invalid ||  myForm.password.$invalid || myForm.email.$invalid || myForm.phoneNo.$invalid " name="action">Create</button>
         <!-- <i class="material-icons right">send</i>-->
         
           </div>&nbsp;&nbsp;&nbsp;
@@ -75,15 +75,6 @@
 		  </div> 
         </form>
         </div>
-
-
-
-
-
-
-
-
-
 
 
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>	

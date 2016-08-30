@@ -5,7 +5,7 @@
               <div class="row">
       <div class="col s4">.</div>
       
-    <form ng-app='myApp' class="col s6 z-depth-2" action="" method="POST" ng-controller="validateCtrl" 
+    <form ng-app='myApp' class="col s6 z-depth-2" action="retu.php" method="POST" ng-controller="validateCtrl" 
     name="myForm" novalidate>
              <div class="row">
                   <div class="col s2">.</div>
@@ -43,7 +43,7 @@
         <div class="row">
          <div class="col s2">.</div>
             <div class="input-field col s6">
-             <input value="" id="name" type="date" class="validate" name="issue" ng-model="issue" required>
+             <input value="" id="name" type="date" class="validate" name="issue" ng-model="issue" placeholder="yyyy-mm-dd" required>
                    <span style="color:red" ng-show="myForm.issue.$touched && myForm.issue.$invalid">
                    <span ng-show="myForm.issue.$error.required">enter  issue date.</span>
                   </span>  
@@ -53,19 +53,16 @@
 
         <div class="row">
          <div class="col s2">.</div>
-            <div class="input-field col s6">
-             <input value="" id="name" type="date" class="validate" name="due" ng-model="due" required>
-                  <span style="color:red" ng-show="myForm.due.$touched && myForm.due.$invalid">
-                  <span ng-show="myForm.issue.$error.required">enter due date.</span>
-                  </span>
-              <label  class="active" for="name">Due date</label>
+            <div class="input-field col s6" type="date" id="du">
+                <input type="" onclick="due=displaydate()" name="due" value="see due date" required>
+            
         </div>
         </div>
 
              <div class="row">
          <div class="col s2">.</div>
             <div class="input-field col s6">
-             <input value="" id="name" type="date" class="validate" name="retu" ng-model="retu">
+             <input value="" id="name" type="date" class="validate" name="retu" ng-model="retu" placeholder="yyyy-mm-dd" required>
              <span style="color:red" ng-show="myForm.retu.$touched && myForm.retu.$invalid">
                    <span ng-show="myForm.retu.$error.required">enter today date.</span>
                   </span>
@@ -87,8 +84,8 @@
            <div class="row">
               <div class="col s4">.</div>
               <div class="input-field col s3">
-               <button class=" btn indigo darken-1" type="submit" ng-disabled="myForm.book.$touched && myForm.book.$invalid ||  
-myForm.stu.$touched && myForm.stu.$invalid || myForm.num.$touched && myForm.num.$invalid || myForm.issue.$touched && myForm.issue.$invalid || myForm.retu.$touched && myForm.retu.$invalid" name="action">Return</button>  
+               <button class=" btn indigo darken-1" type="submit" ng-disabled=" myForm.book.$invalid ||  
+myForm.stu.$invalid || myForm.num.$invalid || myForm.fine.$invalid " name="action">Return</button>  
         </form>
         </div>
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>	
@@ -106,6 +103,22 @@ app.controller('validateCtrl', function($scope) {
     $scope.fine=0;
 });
 </script>
+</script>
+<script type="text/javascript">
+function displaydate(){
+         var someDate = new Date();
+         var numberOfDaysToAdd = 6;
+         someDate.setDate(someDate.getDate() + numberOfDaysToAdd); 
+
+         var dd = someDate.getDate();
+         var mm = someDate.getMonth() + 1;
+          var y = someDate.getFullYear();
+
+var somedate = y + '-'+ mm + '-'+ dd;
+ document.getElementById("du").innerHTML=somedate;
+  }      
+</script>
+
 
 </body>
 </html>

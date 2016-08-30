@@ -3,12 +3,12 @@
               <div class="row">
       <div class="col s4">.</div>
       
-    <form ng-app='myApp' class="col s6 z-depth-2" action="" method="POST" ng-controller="validateCtrl" 
+    <form ng-app='myApp' class="col s6 z-depth-2" action="ad.php" method="POST" ng-controller="validateCtrl" 
     name="myForm" novalidate>
       <div class="row">
          <div class="col s2">.</div>
             <div class="input-field col s6">
-                <input value="" id="name" type="number" class="validate">
+                <input value="" name="isbn" type="number" class="validate">
              <label  class="active" for="name">ISBN No</label>
         </div>
         </div> 
@@ -38,7 +38,7 @@
       <div class="row">
          <div class="col s2">.</div>
             <div class="input-field col s6">
-          <input value="" id="name" type="text" class="validate">
+          <input value="" name="author" type="text" class="validate">
           <label  class="active" for="name">Author</label>
         </div>
         </div> 
@@ -57,7 +57,7 @@
            <div class="row">
               <div class="col s4">.</div>
               <div class="input-field col s3">
-               <button class=" btn indigo darken-1" type="submit" ng-disabled="myForm.book.$touched && myForm.book.$invalid || myForm.num.$touched && myForm.num.$invalid || myForm.dept.$touched && myForm.dept.$invalid" name="action">Add</button>  
+               <button class=" btn indigo darken-1" type="submit" ng-disabled="myForm.book.$invalid || myForm.num.$invalid || myForm.dept.$invalid" name="action">Add</button>  
         </form>
         </div>
 
@@ -73,6 +73,9 @@ app.controller('validateCtrl', function($scope) {
     $scope.dept='';
 });
 </script>
+
+
+
 
 </body>
 </html>

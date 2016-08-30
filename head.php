@@ -6,6 +6,19 @@
  body{
 background-image:url(css/images/bg.png);
 }
+
+a:visited {
+    background-color:#ce93d8;
+}
+
+a:hover {
+ background-color:;
+ color: black;
+}
+
+a:active {
+    background-color:#3f5165;
+}
  </style>
 
 <link href="css/fonts/google-material/material-icons.css" rel="stylesheet">
@@ -15,11 +28,11 @@ background-image:url(css/images/bg.png);
 </head>
 <body>
     
-     <div class="navbar-fixed">
+     <div class="nav-fixed">
         <nav> 
              
             <div class="nav-wrapper indigo darken-1"> 
-            <a href="http://localhost/library-management-system/" class="brand-logo left"><img src="css/images/l.png" width="180px" height="120px"></a>
+            <a  class="de" href="http://localhost/library-management-system/" class="brand-logo left"><img src="css/images/l.png" width="180px" height="120px"></a>
                <ul id="nav-mobile" class="right indigo darken-1">
                   <li><h5>library management system</h5></li>
                  </ul>

@@ -10,7 +10,6 @@ require('head.php');
       </br></br></br></br>
       <li><a href="libarian.php?page=issue" class="white-text"><i class="material-icons prefix">launch</i>  Issue Books</a></li>
       <li><a href="libarian.php?page=return" class="white-text"><i class="material-icons prefix">system_update_alt</i>  Return Books</a></li>
-      <li><a href="libarian.php?page=create" class="white-text"> <i class="material-icons prefix">supervisor_account</i>  StudentAccount</a></li>
       <li><a href="libarian.php?page=report" class="white-text"> <i class="material-icons prefix">library_books</i>  Report</a></li>
       <li><a href="login.php" class="white-text"><i class="material-icons prefix">person</i>  Logout</a></li>
     </ul>

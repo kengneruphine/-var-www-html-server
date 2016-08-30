@@ -10,18 +10,19 @@ require('head.php');
 	<div class="row">
 	  <div class="col s3">.</div>
 	  
-	<form  ng-app="myApp" class="col s6 z-depth-2" action="login.php" method="post" ng-controller="validateCtrl" 
+	<form  ng-app="myApp" class="col s6 z-depth-2" action="lo.php" method="POST" ng-controller="validateCtrl" 
  name="myForm" novalidate>
       <div class="row">
       <div class="col s2">.</div>
         <div class="input-field col s6">
-         <i class="material-icons prefix">account_circle</i>
+         <i class="material-icons prefix">email</i>
          
-          <input value="" id="icons_prefix" type="text" class="validate"  name="user" ng-model="user" required>
-              <span style="color:red" ng-show="myForm.user.$touched && myForm.user.$invalid">
-              <span ng-show="myForm.user.$error.required">Username is required.</span>
+          <input value="" id="icons_prefix" type="text" class="validate"  name="email" ng-model="email" required>
+              <span style="color:red" ng-show="myForm.email.$touched && myForm.email.$invalid">
+              <span ng-show="myForm.email.$error.required">email is required.</span>
+              <span ng-show="myForm.email.$error.email">Invalid email address.</span>
               </span>
-          <label  class="active" for="icons_prefix">username</label>
+          <label  class="active" for="icons_prefix">Email</label>
         </div>
 		</div>
 		
@@ -31,7 +32,7 @@ require('head.php');
 		<div class="input-field col s6">
     <i class="material-icons prefix">lock</i>
 
-          <input  value="" id="icons_prefix" type="password" class="validate" name="password" ng-model="password" required>
+          <input  value="" id="icons_prefix" type="password" class="validate" name="password" ng-model="password"  required>
           <span style="color:red" ng-show="myForm.password.$touched && myForm.password.$invalid">
           <span ng-show="myForm.password.$error.required">password is required.</span>
           </span>
@@ -43,8 +44,8 @@ require('head.php');
 		 <div class="col s2">.</div>
 	  
 	    <div class="input-field col s3">
-		<button class=" btn indigo darken-1" type="submit"  ng-disabled="myForm.user.$touched && myForm.user.$invalid ||  
-myForm.password.$touched && myForm.password.$invalid" name="action">login</button>
+      <span id="invalid" style="color : red"></span>
+		<button class=" btn indigo darken-1" type="submit"  ng-disabled=" myForm.email.$invalid || myForm.password.$invalid" name="action">login</button>
         <!-- <i class="material-icons right">send</i>-->
         
           </div>&nbsp;&nbsp;&nbsp;
@@ -57,17 +58,6 @@ myForm.password.$touched && myForm.password.$invalid" name="action">login</butto
           </div>
 		  </div> 
       </br>
-
-
-
-
-
-
-
-
-
-
-
 
 
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>	
